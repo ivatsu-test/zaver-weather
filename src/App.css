@@ -1,0 +1,147 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 559px;
+  border-radius: 8px;
+  padding: 48px 56px;
+  background-color: #0A1936;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  position: relative;
+  gap: 16px;
+}
+
+.c-input {
+  height: 38px;
+  border-radius: 30px;
+  padding-left: 18.53px;
+  padding-right: 60.21px;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+.c-btn-search {
+  height: 44px;
+  border-radius: 30px;
+  background: #1090DB;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.current-weather-section {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 56px;
+}
+
+.current-weather-section p {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.current-weather__temperature {
+  font-weight: 700;
+  font-size: 44px;
+}
+
+.current-weather__city {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.daily-weather-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.daily-weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin: 10px;
+}
+
+.daily-weather-item p {
+  color: #FFFFFF;
+  margin: 0;
+  font-weight: 700;
+}
+
+.daily-weather-item__day {
+  font-size: 16px;
+}
+
+.daily-weather-item__temperature {
+  font-size: 20px;
+}
+
+.separator {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 854px) {
+  .main-container {
+    height: 100%;
+    padding: 40px 36px;
+  }
+
+  .input-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .c-input {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+
+  .c-btn-search {
+    width: 100%;
+  }
+
+  .current-weather-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .daily-weather-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .daily-weather-item {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    align-self: center;
+    gap: 16px;
+  }
+}
