@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Zaver Weather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Zaver Weather is a weather application that fetches and processes weather data using the OpenMeteo API. It provides utilities to transform raw weather data into a structured format for use in applications.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetches weather data from the OpenMeteo API.
+- Processes raw weather data into a structured format.
+- Supports current and daily weather information.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **`src/api/`**: Contains API-related code, such as fetching weather data.
+- **`src/components/`**: Contains componens for displaying UI.
+- **`src/utils/`**: Contains utility functions for processing weather data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/zaver-weather.git
+   cd zaver-weather
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Configure environment variables:
+   Create a `.env` file in the root directory and add the required API keys or configurations.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Run the project:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Use the `fetchWeather` function to retrieve weather data from the OpenMeteo API.
+- Use the `createWeatherData` utility to process the raw weather data into a structured format.
+- Use the `findWeatherCodeDescription` to parse received code and receive a readable string.
+- Use the `parseDailyWeatherData` to parse received API data into chunks needed for FED.
 
-### `npm run eject`
+## Acknowledgments
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [OpenMeteo API](https://open-meteo.com/) for providing weather data.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What Could Be Improved
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **UI Enhancements**: Create a cohesive color scheme and implement a responsive layout using CSS Modules or a any CSS framework that would define the style base/schema.
+- **Component Structure**: Refactor components to achieve better separation of concerns, simplifying `App.tsx`, i.e. current and daily weather can be split into separate components.
+- **Error Handling**: Add robust error handling for API calls and user feedback for network issues, add Zod to act as DTO for API calls and be a SSOT for DTO.
+- **Testing**: Increase test coverage by adding unit tests for utilities and integration tests for API calls.
+- **Documentation**: Expand the documentation to include examples of how to use the utilities and API functions.
